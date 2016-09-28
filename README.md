@@ -3,6 +3,6 @@
 
 Only Pairs and Chains working
 
-# Demo
+# Where to test?
 
-https://toosmartbrain.appspot.com/
+[Demo](https://toosmartbrain.appspot.com/)
