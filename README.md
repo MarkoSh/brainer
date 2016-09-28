@@ -1,7 +1,7 @@
 # Brainer
 **Hey, are you here?**
 
-Only Pairs and Chains woking
+Only Pairs and Chains working
 
 # Demo
 
