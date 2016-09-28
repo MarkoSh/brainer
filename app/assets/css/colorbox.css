@@ -1,0 +1,42 @@
+body #colorbox, body #cboxOverlay, body #cboxWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    overflow: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+}
+
+body #colorbox {
+    outline: 0;
+}
+
+body #colorbox #cboxWrapper {
+    max-width: none;
+}
+
+body #colorbox #cboxWrapper, body #colorbox #cboxWrapper #cboxLoadedContent, body #colorbox #cboxWrapper #cboxContent, body #colorbox #cboxWrapper #cboxContent #cboxLoadedContent {
+    box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+}
+
+body #colorbox #cboxWrapper #cboxContent {
+    background: rgba(255, 255, 255, 0.85);
+    overflow: hidden;
+    position: relative;
+}
+
+body #colorbox #cboxWrapper #cboxContent #cboxLoadedContent {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+body #cboxOverlay {
+    background: rgba(0, 0, 0, 0.85);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+/*# sourceMappingURL=colorbox.css.map */

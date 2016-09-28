@@ -1,0 +1,83 @@
+application: toosmartbrain
+version: 1
+runtime: php55
+api_version: 1
+threadsafe: false
+
+handlers:
+- url: /app/assets/fonts/(.*\.woff)
+  mime_type: application/x-font-woff
+  static_files: app/assets/fonts/\1
+  upload: app/assets/fonts/(.*\.woff)
+
+- url: /app/assets/fonts/(.*\.ttf)
+  mime_type: application/x-font-ttf
+  static_files: app/assets/fonts/\1
+  upload: app/assets/fonts/(.*\.ttf)
+
+- url: /app/assets/css/(.*\.(map|scss))
+  mime_type: application/octet-stream
+  static_files: app/assets/css/\1
+  upload: app/assets/css/(.*\.(map|scss))
+
+- url: /app
+  static_dir: app
+  http_headers:
+    X-Trolled-01: .                                      .....--,;;--cccllllllllllllcccc----;,,,--...--,,-..
+    X-Trolled-02: .                           ..-;cldkO00KXNNNNXXXKK000OOkkkkkxxxxxddoooddddddxxxxkkkkOO0XXKx-.
+    X-Trolled-03: .                     .--ok0KXXXNXK0kxolc--;,,,,,,,,,,,;;,,,-------,,--..              .-lOXKd-
+    X-Trolled-04: .                .,lx00Oxl-,-............------...................    ...,;;-.             .oKXd.
+    X-Trolled-05: .             .ckKKkc-...--,----,-.........--,;;----;,-..........--,;;;,-.. .-;;-.           -kNKc.
+    X-Trolled-06: .          .-kXXk-.    ..       ..................          .............,-c--...;--.         .dNNx.
+    X-Trolled-07: .         -0NKd,          .....---,,,,--..               -,...........-,,,--,,--,...,,.        .dNNx.
+    X-Trolled-08: .        .xXd.         .---..         ..,-             .;,.               ...,,--;;-. ...       .oNNo
+    X-Trolled-09: .        .0K.         .;.              ;-              -;                      .-...-.           .oXX-
+    X-Trolled-10: .       .oNO.         .                 ,.              .     ..-,--ccc--,..     ..                lXX-
+    X-Trolled-11: .      .dNX-               ......       ;.                -cxOKK0OXWWWWWWWNX0kc.                    -KXd.
+    X-Trolled-12: .    .l0N0;             ;d0KKKKKXK0ko-...              .l0X0xc,...lXWWWWWWWWKO0Kx-                   ,ONKo.
+    X-Trolled-13: .  .lKNKl...-......-. .dXWN0kkk0NWWWWWN0o.            -KN0;.  .,cokXWWNNNNWNKkxONK- .,-c-.      .-;;;;-lk0XXx;
+    X-Trolled-14: . -KN0l-;ll--.         .,-lodxxkO00KXNWWWX000k.       oXNx;-okKX0kdl------,;coxkkd, ...-. ...---.......-,-lxKO-.
+    X-Trolled-15: ..oNNk,;c,--,.                      ...;xNNOc,.         ,d0X0xc,.     .dOd,           ..;dOKXK00000Ox-.   ..--dKO,
+    X-Trolled-16: .-KW0,-,.,-..,oxkkkdl;-.                -KK-              ..           .dXX0o--....,-oOXNN0d;.-. ..,lOKd.   .. ;KXl.
+    X-Trolled-17: .-XNd,;  ;. l00kxoooxKXKx-..ld-         ;KK-                             .-dkO000000Okxl;.   c0;      -KK;   .  ;XXc
+    X-Trolled-18: .-XXdc.  -. ..    -- -kNNNKKKk,      .,dKNO.                                   ....       .-c0NO-      -X0.  ,.  xN0.
+    X-Trolled-19: ..kNOc-  ,.      .00. ..--...      .l0X0d;.             -dOkxo;...                    .;okKXK0KNXx;.   .0X-  ,.  lNX-
+    X-Trolled-20: ..KKdl  .c,    .dNK,            .;xXWKc.                .;-coOXO,,-.......       .,lx0XXOo;...oNWNXKk-.-KX;  -   dNX.
+    X-Trolled-21: . -XXkc-....  .dNWXl        .-;l0NXNKl.          ,lxkkkxo- .cK0.          ..;lx0XNX0xc.     ,0Nx-.-,-.kXo  .,  ,KNx.
+    X-Trolled-22: .  cXXd,,;-, .oXWNNKo-    .-..  .-.-dKk;        .cooollox;.xXXl     ..,cdOKXXX00NXc.      -oKWK-     ;k-  .l. ,0Nk.
+    X-Trolled-23: .   cXNx.  . ,KWX0NNNXOl-.           .o0Ooldk;            .-c;.--lxOKKK0xo-,.. ;XX-   .,lOXWWXd.      . .--,.lKXd.
+    X-Trolled-24: .    lXNo    cXWWWXooNWNXKko;-..       .lk0x;       ...,-ldk0KXNNOo-,..       ,OWNOxO0KXXNWNO,        ....-l0Xk,
+    X-Trolled-25: .    .dNK.   oNWWNo.cXK;;oOXNNXK0kxdolllllooooddxk00KKKK0kdoc-c0No        .-ckXWWWNXkc,;kNKl.          .,kXXk,
+    X-Trolled-26: .     -KXc  .dNWWX;.xNk.  .kNO--lodxkOXWN0OkxdlcxNKl,..        oN0-..,-ox0XNWWNNWXo.  ,ONO-           .o0Xk;
+    X-Trolled-27: .     .ONo    oNWWN0xXWK, .oNKc       .ONx.      ;X0.          .-XNKKNNWWWWNKkl;kNk. .cKXo.           .ON0;
+    X-Trolled-28: .     .xNd   cNWWWWWWWWKOkKNXxl-,-...;0Xo-.....-lXK;...-,-lxk0KNWWWWNNKOd-..   lXKclON0-            .xNk.
+    X-Trolled-29: .     .dXd   ;XWWWWWWWWWWWWWWWWWWNNNNNWWNNNNNNNNNWWNNNNNNWWWWWNXKNNk;..        .dNWWXd.             cXO.
+    X-Trolled-30: .     .xXo   .ONWNWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWNNK0ko--..OXo          -l0NXx,              -KK,
+    X-Trolled-31: .     .OXc    -XNk0NWXKNWWWWWWWWWWWWWWWWWWWWWNNNX00NNx--..       lXKc.     -lONN0l.              .oXK-
+    X-Trolled-32: .     .KX;    .dNKoON0;lXNkcld0NXo--cd0NNO--,,-.. .0Xc            lXXo..-l0NNKd,.              .c0Nk,
+    X-Trolled-33: .     -XK.     .xNX0NKc.cXXl  ;KXl    .dN0.       .0No            .xNXOKNXOo,.               .l0Xk;.
+    X-Trolled-34: .    .dXk.      .lKWN0d--OWK;  lXXc    .OX-       .ONx.     . .,cdk0XNXOd;.   .---....;c--..;xKXx,
+    X-Trolled-35: .    .0No         .-dOKNNNWNKOxkXWXo-,,;ONk;,,,,,;c0NXOxxkO0XXNXKOdc,.  ..;--,...;lol;..-xKXOl.
+    X-Trolled-36: .    .XX-             ..-;cldxkOO0KKKXXXXXXXXXXKKKKK00Okxdol---..   .-;--,..--llc,..-lkKXkc.
+    X-Trolled-37: .    -NX-    .     --            ..................             .,;--,-,;ccc;-..-lkKX0d;.
+    X-Trolled-38: .    lNK.   .;      ,lc,.         ................        ..,,;;;;;;---,....,lkKX0d-.
+    X-Trolled-39: .   .oN0.    .-.      .;ccc;,-....              ....--,;;;;;;;;;;-..   .;oOXX0d-.
+    X-Trolled-40: .   .dN0.      .;;,..       ....                ..--------....     .-dOKKko;.
+    X-Trolled-41: .    lNK-         ..,;--;;,-.........................           .;d0X0kc-.
+    X-Trolled-42: .    .xXO-                                                 .;oOK0x-.
+    X-Trolled-43: .     .cKKo.                                    .,-oxkkkxk0K0xc-.
+    X-Trolled-44: .       .oKKkc,.                         .-;cok0XNNNX0Oxoc,.
+    X-Trolled-45: .         .;d0XX0kdlc--,,,-,,,;;-clodkO0KK0Okdl-,-..
+    X-Trolled-46: .             .,coxO0KXXXXXXXKK0OOxdoc-,..
+    X-Trolled-47: .                       ...
+
+
+- url: /cache.manifest
+  script: cache.manifest
+
+- url: .*
+  script: index.php
+
+skip_files:
+- ^(fa\-icons|fullPage|migrate|ui|shuffle)
+- ^(.+)\.md

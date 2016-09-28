@@ -1,0 +1,443 @@
+html, html body {
+    background: radial-gradient(circle, rgba(37, 37, 55, 0.85), rgba(0, 15, 33, 0.98)), #0c0c0c;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', sans-serif;
+    color: #ffffff;
+}
+
+html body {
+    overflow-x: hidden !important;
+}
+
+html body section {
+    width: 100%;
+    position: relative;
+    height: 100.1vh;
+    min-height: 568px;
+    overflow: hidden;
+}
+
+html body section article {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100.1vh;
+    min-height: 568px;
+    z-index: 1;
+    background: radial-gradient(circle, rgba(37, 37, 55, 0.85), rgba(0, 15, 33, 0.98));
+}
+
+html body section article header {
+    text-align: center;
+}
+
+html body section article h1, html body section article h2, html body section article h3, html body section article h4 {
+    padding: 15px;
+    margin: 0;
+    font-weight: 200;
+}
+
+html body section article h1 {
+    font-size: 3em;
+}
+
+html body section article h2 {
+    font-size: 2em;
+    margin: 0 0 .5em;
+}
+
+html body section article h3 {
+    font-size: 1.5em;
+    margin: 0 0 .5em;
+}
+
+html body section article h4 {
+    font-size: 1em;
+    margin: 0 0 .5em;
+}
+
+html body section article .gamemenu {
+    position: absolute;
+    list-style: none;
+    float: left;
+    z-index: 99;
+}
+
+@media (max-width: 768px) {
+    html body section article .gamemenu {
+        padding-left: 0;
+        position: absolute;
+        width: 100%;
+        left: -99%;
+        float: none;
+    }
+}
+
+html body section article .gamemenu > li {
+    position: relative;
+    color: white;
+    cursor: pointer;
+    padding: 1em;
+    background: rgba(0, 0, 0, 0.6);
+    transition: .2s;
+}
+
+html body section article .gamemenu > li > .gamemenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    padding: 0 0 0 5px;
+    float: none;
+    width: 500px;
+}
+
+html body section article .gamemenu > li > .gamemenu:before {
+    content: "";
+    border-right: 5px solid rgba(0, 0, 0, 0.6);
+    border-left: 5px solid transparent;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    font-size: 0;
+    position: absolute;
+    top: 50%;
+    margin: -5px 0 0 -9px;
+}
+
+html body section article .gamemenu > li > .gamemenu > li {
+    width: 20%;
+    display: table-cell;
+    text-align: center;
+}
+
+@media (max-width: 1024px) {
+    html body section article .gamemenu > li > .gamemenu > li {
+        width: 25% !important;
+    }
+}
+
+html body section article .gamemenu > li > .gamemenu > li > .gamemenu {
+    display: none;
+}
+
+html body section article .gamemenu > li:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+html body section article .gamemenu > li:hover > .gamemenu {
+    display: table;
+}
+
+html body section article .gamemenu > li:hover > .gamemenu > li:hover > .gamemenu {
+    display: block;
+    width: 100%;
+    left: 0;
+    top: 100%;
+    padding: 0;
+}
+
+html body section article .gamemenu > li:hover > .gamemenu > li:hover > .gamemenu > li {
+    display: block;
+    width: auto;
+    text-align: left;
+}
+
+html body section article .field {
+    margin: 0 auto;
+    display: table;
+}
+
+html body section article .field #answers {
+    opacity: 0;
+    margin-top: 1em;
+}
+
+html body section article .field .row {
+    display: table;
+    margin: 0 auto;
+}
+
+html body section article .field .row .cell {
+    display: table-cell;
+    position: relative;
+    touch-action: manipulation;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+html body section article .field .row .cell.me:after {
+    content: "";
+    border-bottom: 5px solid red;
+    border-top: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    position: absolute;
+    margin: -5px;
+}
+
+html body section article .field .row .cell .iwrap {
+    background: rgba(75, 75, 75, 0.4);
+    transition: .3s;
+    margin: .5px;
+}
+
+html body section article .field .row .cell .iwrap i, html body section article .field .row .cell .iwrap input {
+    font-size: 1.5em;
+    width: 1em;
+    height: 1em;
+    padding: .5em;
+}
+
+html body section article .field .row .cell .iwrap i.math, html body section article .field .row .cell .iwrap input.math {
+    font-family: 'Cairo', sans-serif;
+    width: 1.3em;
+    font-size: 2em;
+}
+
+@media (max-width: 768px) {
+    html body section article .field .row .cell .iwrap i.math.math, html body section article .field .row .cell .iwrap input.math.math {
+        font-size: 1.5em;
+    }
+}
+
+html body section article .field .row .cell .iwrap input {
+    border: none;
+    outline: none;
+}
+
+html body section article .field .row .cell:hover .iwrap {
+    background: rgba(75, 75, 75, 0.8) !important;
+}
+
+html body section .parallax {
+    background-image: url(../../../app/assets/images/bg_1.jpg);
+    background-position-x: 50% !important;
+    background-size: cover !important;
+    margin: 0;
+    height: 200vh;
+    min-height: 568px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+html body section:nth-child(2) .parallax {
+    background-image: url(../../../app/assets/images/bg_2.jpg);
+}
+
+html body section:nth-child(3) .parallax {
+    background-image: url(../../../app/assets/images/bg_3.jpg);
+}
+
+html body section:nth-child(4) .parallax {
+    background-image: url(../../../app/assets/images/bg_4.jpg);
+}
+
+html body section:nth-child(5) .parallax {
+    background-image: url(../../../app/assets/images/bg_5.jpg);
+}
+
+html body section:nth-child(6) .parallax {
+    background-image: url(../../../app/assets/images/bg_6.jpg);
+}
+
+html body section:nth-child(7) .parallax {
+    background-image: url(../../../app/assets/images/bg_7.jpg);
+}
+
+html body section:nth-child(8) .parallax {
+    background-image: url(../../../app/assets/images/bg_8.jpg);
+}
+
+html body section .next {
+    margin-left: -1em;
+    border-right: 1em solid transparent;
+    border-left: 1em solid transparent;
+    border-top: 1em solid red;
+    position: absolute;
+    bottom: .5em;
+    left: 50%;
+    z-index: 2;
+    cursor: pointer;
+}
+
+html body section:nth-child(8) .next {
+    display: none;
+}
+
+html body section .version {
+    color: whitesmoke;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    right: 0;
+    padding: .2em;
+    font-size: 0.5em;
+}
+
+html body #informer {
+    cursor: pointer;
+    position: fixed;
+    top: 1em;
+    right: 1em;
+    background: rgba(0, 0, 0, 0.8);
+    padding: .5em;
+    font-size: 2em;
+    z-index: 98;
+}
+
+@media (max-width: 768px) {
+    html body #informer {
+        top: auto;
+        right: .3em;
+        bottom: .3em;
+        font-size: 1em;
+        padding: .3em;
+    }
+}
+
+html body #informer #curstats {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+html body #informer #curstats li {
+    font-size: .5em;
+}
+
+html body #informer #curstats li span {
+    float: right;
+}
+
+html body #informer #start {
+    font-size: .5em;
+    text-align: right;
+    color: red;
+}
+
+html body #stats {
+    display: none;
+}
+
+html body #totop {
+    display: none;
+    position: fixed;
+    left: .5em;
+    bottom: .5em;
+    background: rgba(127, 255, 212, 0.5);
+    width: 1em;
+    height: 1.5em;
+    padding: .5em 1em 1em 1em;
+    z-index: 100;
+    cursor: pointer;
+}
+
+html body #cboxLoadedContent #stats {
+    display: block;
+    height: 100%;
+}
+
+html body #cboxLoadedContent #stats .statcontainer {
+    opacity: 0;
+    width: 100%;
+    height: 80%;
+    max-height: 600px;
+    overflow: hidden;
+    float: left;
+}
+
+html body #cboxLoadedContent #stats .statcontainer .canvasjs-chart-tooltip {
+    text-transform: capitalize;
+}
+
+html body #cboxLoadedContent #stats .statcontainer .canvasjs-chart-toolbar {
+    color: #000;
+}
+
+html body #cboxLoadedContent #stats .statcontainer .canvasjs-chart-toolbar button {
+    background: rgba(0, 0, 0, 0.4);
+    border: none;
+    outline: none;
+}
+
+@media (max-width: 1024px) {
+    .hidden-1024 {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .hidden-768 {
+        display: none !important;
+    }
+
+    html body section article .gamemenu li .gamemenu {
+        position: relative;
+        float: right;
+        margin: -1em;
+        display: table;
+        right: 0;
+        left: auto;
+        width: 70%;
+    }
+
+    html body section article .gamemenu li .gamemenu li {
+        width: 33.5% !important;
+    }
+
+    html body section article > .gamemenu:after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: -5px;
+        top: 50%;
+        border-top: 5px solid transparent;
+        border-right: none;
+        border-bottom: 5px solid transparent;
+        border-left: 5px solid rgba(40, 179, 255, 0.6);
+    }
+}
+
+@media (max-width: 425px) {
+    .hidden-425 {
+        display: none !important;
+    }
+
+    html body section article .field .row .cell .iwrap i {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 375px) {
+    .hidden-375 {
+        display: none !important;
+    }
+
+    html body section article .gamemenu li .gamemenu li {
+        width: 50% !important;
+    }
+}
+
+.wow {
+    visibility: hidden;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.hidden {
+    display: none;
+}
+
+/*# sourceMappingURL=main.css.map */
