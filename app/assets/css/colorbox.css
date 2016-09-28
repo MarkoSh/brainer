@@ -6,7 +6,6 @@ body #colorbox, body #cboxOverlay, body #cboxWrapper {
     overflow: hidden;
     -webkit-transform: translate3d(0, 0, 0);
 }
-
 body #colorbox {
     outline: 0;
 }
@@ -31,7 +30,6 @@ body #colorbox #cboxWrapper #cboxContent #cboxLoadedContent {
     overflow: auto;
     -webkit-overflow-scrolling: touch;
 }
-
 body #cboxOverlay {
     background: rgba(0, 0, 0, 0.85);
     position: fixed;
