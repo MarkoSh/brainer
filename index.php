@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<section id="pairs" class="hidden section wow slideInLeft" data-wow-delay=".1s">
+<section id="pairs" class="section wow slideInLeft" data-wow-delay=".1s">
     <article>
         <header>
             <h1 class="wow fadeInDown">Pairs</h1>
@@ -76,7 +76,7 @@
     <div class="version">pairs v1.0.0Beta</div>
 </section>
 
-<section id="chains" class="hidden section wow slideInRight" data-wow-delay=".1s">
+<section id="chains" class="section wow slideInRight" data-wow-delay=".1s">
     <article>
         <header>
             <h1 class="wow fadeInDown">Chains</h1>
